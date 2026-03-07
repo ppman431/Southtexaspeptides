@@ -8,7 +8,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "images/reta.png"
+    img: "reta.png"
   },
   {
     id: "glp3r-50",
