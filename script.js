@@ -29,6 +29,67 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01"
   }
+  const PRODUCTS = [
+  {
+    id: "item-1",
+    name: "Product 1",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 25.00,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-01"
+  },
+  {
+    id: "item-2",
+    name: "Product 2",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 37.50,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-02"
+  },
+  {
+    id: "item-3",
+    name: "Product 3",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 50.00,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-03"
+  },
+  {
+    id: "item-4",
+    name: "Product 4",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 65.00,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-04"
+  },
+  {
+    id: "item-5",
+    name: "Product 5",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 75.00,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-05"
+  },
+  {
+    id: "item-6",
+    name: "Product 6",
+    short: "Short product description here.",
+    purity: "99%+ purity",
+    price: 100.00,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "STP-06"
+  }
 ];
 
 const els = {
