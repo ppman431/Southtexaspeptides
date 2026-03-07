@@ -79,16 +79,6 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "STP-05"
-  },
-  {
-    id: "item-6",
-    name: "Product 6",
-    short: "Short product description here.",
-    purity: "99%+ purity",
-    price: 100.0,
-    tag: "Featured",
-    badges: ["Research", "HPLC 99%"],
-    ref: "STP-06"
   }
 ];
 
