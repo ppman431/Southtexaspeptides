@@ -1,90 +1,311 @@
-<section class="section" id="pricelist">
-  <div class="container">
-    <div class="section__head">
-      <div>
-        <div class="kicker">Pricing</div>
-        <h2 class="section__title">Current Price List</h2>
-        <p class="muted" style="margin-top:10px;">
-          Free shipping on orders over <strong>$100</strong>. Supplies not included unless specified.
-        </p>
-        <p class="muted" style="margin-top:6px;">
-          Note: Bacteriostatic water not included. <strong>3mL vial — $5</strong>
-        </p>
-      </div>
-    </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>South Texas Peptides — Research-Grade Peptides</title>
+  <meta name="description" content="Premium research-grade peptides with verified purity, rigorous testing, and fast shipping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <div class="pricegrid">
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product A</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
-
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product B</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
-
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product C</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
-
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product D</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
-
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product E</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
-
-      <div class="pricecard">
-        <div class="pricecard__top">
-          <span class="pill small"><span class="dot"></span> Research</span>
-        </div>
-        <div class="pricecard__name">Product F</div>
-        <div class="pricecard__desc">Description line (edit me)</div>
-        <div class="pricecard__bottom">
-          <div class="pricecard__price">$—</div>
-          <a class="btn btn--ghost" href="#contact">Contact to Order</a>
-        </div>
-      </div>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="pill">
+        <span class="dot"></span> Research-Grade Peptides
+      </span>
+      <span class="topbar__note">All products are for research use only. Not for human consumption.</span>
     </div>
   </div>
-</section>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#home" aria-label="South Texas Peptides Home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M10 2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 2v6l6.3 10.7A3 3 0 0 1 15.7 23H8.3a3 3 0 0 1-2.6-4.3L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__text">South Texas Peptides</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#home" class="nav__link is-active">Home</a>
+        <a href="#products" class="nav__link">Products</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="iconbtn" id="openCartBtn" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM18 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="cartbadge" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobilemenu" id="mobileMenu" aria-hidden="true">
+      <a href="#home" class="mobilemenu__link">Home</a>
+      <a href="#products" class="mobilemenu__link">Products</a>
+      <a href="#faq" class="mobilemenu__link">FAQ</a>
+      <a href="#contact" class="mobilemenu__link">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M10 2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 2v6l6.3 10.7A3 3 0 0 1 15.7 23H8.3a3 3 0 0 1-2.6-4.3L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Research-Grade Peptides
+          </div>
+
+          <h1 class="hero__title">
+            Precision <span class="accent">Peptides</span><br />
+            for Modern Research
+          </h1>
+
+          <p class="hero__desc">
+            South Texas Peptides delivers research-grade peptides with verified purity, rigorous testing, and fast shipping.
+            Your trusted partner in peptide research.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#products">
+              Browse Peptides
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#products">View All Products</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="radar">
+            <div class="radar__ring r1"></div>
+            <div class="radar__ring r2"></div>
+            <div class="radar__ring r3"></div>
+            <div class="radar__core">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
+                <path d="M10 2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 2v6l6.3 10.7A3 3 0 0 1 15.7 23H8.3a3 3 0 0 1-2.6-4.3L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="floatcard fc1">
+              <div class="floatcard__title">99%+ Purity</div>
+              <div class="floatcard__sub">HPLC Verified</div>
+            </div>
+            <div class="floatcard fc2">
+              <div class="floatcard__badge">3rd</div>
+              <div>
+                <div class="floatcard__title">Party Tested</div>
+                <div class="floatcard__sub">Every Batch</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust icons -->
+    <section class="trust">
+      <div class="container trust__inner">
+        <div class="trustitem">
+          <div class="trusticon">🛡️</div>
+          <div class="trusttext">
+            <div class="trusttext__title">99%+ Purity</div>
+            <div class="trusttext__sub">HPLC verified on every batch</div>
+          </div>
+        </div>
+
+        <div class="trustitem">
+          <div class="trusticon">🧪</div>
+          <div class="trusttext">
+            <div class="trusttext__title">Lab Tested</div>
+            <div class="trusttext__sub">Third-party COA included</div>
+          </div>
+        </div>
+
+        <div class="trustitem">
+          <div class="trusticon">🚚</div>
+          <div class="trusttext">
+            <div class="trusttext__title">Fast Shipping</div>
+            <div class="trusttext__sub">Discreet, temperature-controlled</div>
+          </div>
+        </div>
+
+        <div class="trustitem">
+          <div class="trusticon">🎧</div>
+          <div class="trusttext">
+            <div class="trusttext__title">Expert Support</div>
+            <div class="trusttext__sub">Knowledgeable team ready to help</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="kicker">Our Selection</div>
+            <h2 class="section__title">Featured Peptides</h2>
+          </div>
+
+          <div class="section__actions">
+            <div class="search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products" />
+            </div>
+            <a class="link" href="#products">View All →</a>
+          </div>
+        </div>
+
+        <div class="grid" id="productGrid">
+          <!-- Product cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__bg" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <h2 class="cta__title">Ready to Start Your <span class="accent">Research Journey</span>?</h2>
+        <p class="cta__desc">
+          Browse our full catalog of research-grade peptides with guaranteed purity and fast, discreet shipping.
+        </p>
+        <a class="btn btn--primary" href="#products">Shop Now <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="kicker">Help</div>
+            <h2 class="section__title">FAQ</h2>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Do you provide COAs?</summary>
+            <p>Yes — each batch includes documentation (e.g., third-party analysis / COA where applicable).</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>How is shipping handled?</summary>
+            <p>Discreet packaging with fast fulfillment. Temperature-controlled options can be added based on product needs.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Are products for human use?</summary>
+            <p>No. Products are sold strictly for research purposes only.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M10 2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 2v6l6.3 10.7A3 3 0 0 1 15.7 23H8.3a3 3 0 0 1-2.6-4.3L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__text">South Texas Peptides</span>
+        </div>
+        <p class="footer__muted">
+          Premium research-grade peptides with verified purity, third-party testing, and reliable shipping.
+          Your trusted peptide supplier.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Quick Links</div>
+        <a class="footer__link" href="#products">Products</a>
+        <a class="footer__link" href="#home">About Us</a>
+        <a class="footer__link" href="#faq">FAQ</a>
+        <a class="footer__link" href="#contact">Shipping Policy</a>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Contact</div>
+        <a class="footer__link" href="mailto:support@southtexaspeptides.com">support@southtexaspeptides.com</a>
+        <div class="footer__muted footer__small">
+          All products are sold strictly for research purposes only. Not for human consumption.
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> South Texas Peptides. All rights reserved.</span>
+      <span class="footer__bottomRight">Built lightweight • hosted free</span>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer__overlay" id="closeCartOverlay"></div>
+    <div class="drawer__panel" role="dialog" aria-label="Shopping cart">
+      <div class="drawer__head">
+        <div>
+          <div class="drawer__title">Cart</div>
+          <div class="drawer__sub" id="cartSub">0 items</div>
+        </div>
+        <button class="iconbtn" id="closeCartBtn" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="drawer__body" id="cartItems"></div>
+
+      <div class="drawer__foot">
+        <div class="totals">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="btn btn--primary btn--full" id="checkoutBtn">Checkout (demo)</button>
+        <div class="drawer__fineprint">
+          Demo checkout only.
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
