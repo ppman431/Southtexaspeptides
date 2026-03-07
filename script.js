@@ -151,12 +151,9 @@ function renderProducts(list) {
     card.innerHTML = `
       <div class="card__media">
         <div class="tag">${p.tag}</div>
-        <div class="productimg">
-          <div style="text-align:center; line-height:1.1">
-            <div style="font-size:12px; opacity:.9">SOUTH TEXAS PEPTIDES</div>
-            <div style="font-size:22px; margin-top:10px">${p.ref}</div>
-          </div>
-        </div>
+       <div class="productimg">
+  <img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;">
+</div>
       </div>
       <div class="card__body">
         <div class="badgeRow">
