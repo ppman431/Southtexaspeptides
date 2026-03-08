@@ -21,24 +21,24 @@ const PRODUCTS = [
     ref: "GLP3-R-01"
   },
   {
-    id: "Cjc",
-    name: "Cjc ",
-    short: "Cjc Growth Hormone-Releasing Hormone",
+    id: "Cjc1295",
+    name: "Cjc1295-Ipamorelin (no DAC) 10mg ",
+    short: "Cjc-Ipamorelin Growth Hormone-Releasing Hormone",
     purity: "99%+ purity",
-    price: 75,
+    price: 65,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "CJC"
+    ref: "CJC1295"
   },
   {
-    id: "Ghkcu",
-    name: "Ghkcu 100mg",
+    id: "GHKCu",
+    name: "GHK-Cu 100mg",
     short: "Copper peptide studied for collagen and tissue repair signaling - Vial ",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "GHKCU"
+    ref: "GHK-CU"
   },
   {
     id: "Klow",
@@ -51,24 +51,24 @@ const PRODUCTS = [
     ref: "KLOW"
   },
   {
-    id: "item-3",
-    name: "Product 3",
-    short: "Short product description here.",
+    id: "Lipo-C",
+    name: "Lipo-C 216mg",
+    short: "Enhance metabolism, boost energy levels, and aid in fat reduction.",
+    purity: "99%+ purity",
+    price: 75.0,
+    tag: "Featured",
+    badges: ["Research", "HPLC 99%"],
+    ref: "LIPO-C"
+  },
+  {
+    id: "GHRP-6",
+    name: "GHRP-6 10mg",
+    short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH).",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "STP-03"
-  },
-  {
-    id: "item-4",
-    name: "Product 4",
-    short: "Short product description here.",
-    purity: "99%+ purity",
-    price: 65.0,
-    tag: "Featured",
-    badges: ["Research", "HPLC 99%"],
-    ref: "STP-04"
+    ref: "GHRP-6"
   },
   {
     id: "item-5",
