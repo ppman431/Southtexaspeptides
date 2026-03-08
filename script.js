@@ -78,14 +78,15 @@ const PRODUCTS = [
     img: "GHRP.png"
   },
   {
-    id: "item-5",
-    name: "Product 5",
-    short: "Short product description here.",
+    id: "Nad+",
+    name: "Nad+ 100mg",
+    short: "",
     purity: "99%+ purity",
     price: 75.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "STP-05"
+    ref: "NAD+",
+    img: "Nad.png"
   }
 ];
 
