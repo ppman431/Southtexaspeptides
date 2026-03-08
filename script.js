@@ -8,7 +8,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "reta.png"
+    img: "GLP310.png"
   },
   {
     id: "glp3r-50",
@@ -18,7 +18,8 @@ const PRODUCTS = [
     price: 100.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "GLP3-R-01"
+    ref: "GLP3-R-01",
+    img: "GLP320.png"
   },
   {
     id: "Cjc1295",
@@ -28,7 +29,8 @@ const PRODUCTS = [
     price: 65,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "CJC1295"
+    ref: "CJC1295",
+    img: "CJC.png"
   },
   {
     id: "GHKCu",
@@ -38,7 +40,8 @@ const PRODUCTS = [
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "GHK-CU"
+    ref: "GHK-CU",
+    img: "GHK.png"
   },
   {
     id: "Klow",
@@ -48,7 +51,8 @@ const PRODUCTS = [
     price: 85.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "KLOW"
+    ref: "KLOW",
+    img: "KLOW.png"
   },
   {
     id: "Lipo-C",
@@ -58,7 +62,9 @@ const PRODUCTS = [
     price: 75.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "LIPO-C"
+    ref: "LIPO-C",
+    img: "Lipo.png"
+    
   },
   {
     id: "GHRP-6",
@@ -68,7 +74,8 @@ const PRODUCTS = [
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
-    ref: "GHRP-6"
+    ref: "GHRP-6",
+    img: "GHRP.png"
   },
   {
     id: "item-5",
