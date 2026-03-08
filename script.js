@@ -80,7 +80,7 @@ const PRODUCTS = [
   {
     id: "Nad+",
     name: "Nad+ 100mg",
-    short: "",
+    short: "Boosts cellular energy (ATP), supports DNA repair, reduces inflammation, and may improve metabolism and cognitive function.",
     purity: "99%+ purity",
     price: 75.0,
     tag: "Featured",
