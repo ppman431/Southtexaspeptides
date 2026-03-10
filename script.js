@@ -2,7 +2,7 @@ const PRODUCTS = [
   {
     id: "glp3r-25",
     name: "GLP3-R 10mg",
-    short: "GLP-3R Appetite & Metabolic Peptide",
+    short: "GLP-3R Appetite & Metabolic Peptide - Not for human consumption",
     purity: "99%+ purity",
     price: 75.0,
     tag: "Featured",
@@ -14,7 +14,7 @@ const PRODUCTS = [
   {
     id: "glp3r-50",
     name: "GLP3-R 20mg",
-    short: "GLP-3R Appetite & Metabolic Peptide",
+    short: "GLP-3R Appetite & Metabolic Peptide - Not for human consumption",
     purity: "99%+ purity",
     price: 100.0,
     tag: "Featured",
@@ -26,7 +26,7 @@ const PRODUCTS = [
   {
     id: "Cjc1295",
     name: "Cjc1295-Ipamorelin (no DAC) 10mg ",
-    short: "Cjc-Ipamorelin Growth Hormone-Releasing Hormone",
+    short: "Cjc-Ipamorelin Growth Hormone-Releasing Hormone - Not for human consumption",
     purity: "99%+ purity",
     price: 65,
     tag: "Featured",
@@ -38,7 +38,7 @@ const PRODUCTS = [
   {
     id: "GHKCu",
     name: "GHK-Cu 100mg",
-    short: "Copper peptide studied for collagen and tissue repair signaling - Vial ",
+    short: "Copper peptide studied for collagen and tissue repair signaling - Vial - Not for human consumption ",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
@@ -50,7 +50,7 @@ const PRODUCTS = [
   {
     id: "Klow",
     name: "Klow",
-    short: "Peptide studied for tissue repair, inflammation reduction, and recovery support - Vial",
+    short: "Peptide studied for tissue repair, inflammation reduction, and recovery support - Vial - Not for human consumption",
     purity: "99%+ purity",
     price: 85.0,
     tag: "Featured",
@@ -62,7 +62,7 @@ const PRODUCTS = [
   {
     id: "Lipo-C",
     name: "Lipo-C 216mg",
-    short: "Enhance metabolism, boost energy levels, and aid in fat reduction.",
+    short: "Enhance metabolism, boost energy levels, and aid in fat reduction - Not for human consumption",
     purity: "99%+ purity",
     price: 75.0,
     tag: "Featured",
@@ -75,7 +75,7 @@ const PRODUCTS = [
   {
     id: "GHRP-6",
     name: "GHRP-6 10mg",
-    short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH).",
+    short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH) - Not for human consumption ",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
@@ -87,7 +87,7 @@ const PRODUCTS = [
   {
     id: "Nad+",
     name: "Nad+ 100mg",
-    short: "Boosts cellular energy (ATP), supports DNA repair, reduces inflammation, and may improve metabolism and cognitive function.",
+    short: "Boosts cellular energy (ATP), supports DNA repair, reduces inflammation, and may improve metabolism and cognitive function - Not for human consumption",
     purity: "99%+ purity",
     price: 75.0,
     tag: "Featured",
