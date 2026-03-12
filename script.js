@@ -301,10 +301,10 @@ async function handleCheckout() {
     return;
   }
 
-  if (!window.BACKEND_URL) {
-    alert("Backend URL is missing.");
-    return;
-  }
+ if (!BACKEND_URL) {
+  alert("Backend URL is missing.");
+  return;
+}
 
   try {
     if (els.checkoutBtn) {
