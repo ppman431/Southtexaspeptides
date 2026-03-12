@@ -8,8 +8,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "GLP310.png",
-    link: "https://square.link/u/ors04Cjh"
+    img: "GLP310.png"
   },
   {
     id: "glp3r-50",
@@ -20,32 +19,29 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "GLP320.png",
-    link: "https://square.link/u/kXtODAc1"
+    img: "GLP320.png"
   },
   {
     id: "Cjc1295",
-    name: "Cjc1295-Ipamorelin (no DAC) 10mg ",
+    name: "Cjc1295-Ipamorelin (no DAC) 10mg",
     short: "Cjc-Ipamorelin Growth Hormone-Releasing Hormone - Not for human consumption",
     purity: "99%+ purity",
-    price: 65,
+    price: 65.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "CJC1295",
-    img: "CJC.png",
-    link: "https://square.link/u/O47iNauh"
+    img: "CJC.png"
   },
   {
     id: "GHKCu",
     name: "GHK-Cu 100mg",
-    short: "Copper peptide studied for collagen and tissue repair signaling - Vial - Not for human consumption ",
+    short: "Copper peptide studied for collagen and tissue repair signaling - Vial - Not for human consumption",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GHK-CU",
-    img: "GHK.png",
-    link: "https://square.link/u/tAbBq7wX"
+    img: "GHK.png"
   },
   {
     id: "Klow",
@@ -56,8 +52,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "KLOW",
-    img: "KLOW.png",
-    link: "https://square.link/u/rWEAh4Hm"
+    img: "KLOW.png"
   },
   {
     id: "Lipo-C",
@@ -68,21 +63,18 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "LIPO-C",
-    img: "Lipo.png",
-    link: "https://square.link/u/EoT84Yzd"
-    
+    img: "Lipo.png"
   },
   {
     id: "GHRP-6",
     name: "GHRP-6 10mg",
-    short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH) - Not for human consumption ",
+    short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH) - Not for human consumption",
     purity: "99%+ purity",
     price: 50.0,
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GHRP-6",
-    img: "GHRP.png",
-    link: "https://square.link/u/9ZPTKoZK"
+    img: "GHRP.png"
   },
   {
     id: "Nad+",
@@ -93,8 +85,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "NAD+",
-    img: "Nad.png",
-    link: "https://square.link/u/zXYtr62r"
+    img: "Nad.png"
   }
 ];
 
@@ -147,6 +138,24 @@ function cartTotal(cart) {
   return total;
 }
 
+function getCheckoutItems(cart) {
+  const items = [];
+
+  for (const [id, qty] of Object.entries(cart)) {
+    const p = PRODUCTS.find((x) => x.id === id);
+    if (!p || qty <= 0) continue;
+
+    items.push({
+      id: p.id,
+      name: p.name,
+      quantity: qty,
+      price: Math.round(p.price * 100)
+    });
+  }
+
+  return items;
+}
+
 function renderProducts(list) {
   if (!els.grid) return;
 
@@ -171,15 +180,9 @@ function renderProducts(list) {
         <div class="card__meta">${p.purity}</div>
         <div class="card__foot">
           <div class="price">${money(p.price)}</div>
-          ${
-            p.link
-              ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="addbtn">
-                   <span aria-hidden="true">🛒</span> Buy
-                 </a>`
-              : `<button class="addbtn" data-add="${p.id}">
-                   <span aria-hidden="true">🛒</span> Add
-                 </button>`
-          }
+          <button class="addbtn" data-add="${p.id}">
+            <span aria-hidden="true">🛒</span> Add
+          </button>
         </div>
       </div>
     `;
@@ -289,6 +292,56 @@ function setActiveNav() {
   });
 }
 
+async function handleCheckout() {
+  const cart = loadCart();
+  const items = getCheckoutItems(cart);
+
+  if (items.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  if (!window.BACKEND_URL) {
+    alert("Backend URL is missing.");
+    return;
+  }
+
+  try {
+    if (els.checkoutBtn) {
+      els.checkoutBtn.disabled = true;
+      els.checkoutBtn.textContent = "Redirecting...";
+    }
+
+    const response = await fetch(`${BACKEND_URL}/create-checkout`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ items })
+    });
+
+    if (!response.ok) {
+      throw new Error("Checkout request failed.");
+    }
+
+    const data = await response.json();
+
+    if (!data.checkoutUrl) {
+      throw new Error("No checkout URL returned.");
+    }
+
+    window.location.href = data.checkoutUrl;
+  } catch (error) {
+    console.error(error);
+    alert("There was a problem starting checkout. Make sure your backend server is running.");
+  } finally {
+    if (els.checkoutBtn) {
+      els.checkoutBtn.disabled = false;
+      els.checkoutBtn.textContent = "Checkout";
+    }
+  }
+}
+
 function init() {
   if (els.year) els.year.textContent = new Date().getFullYear();
 
@@ -314,9 +367,7 @@ function init() {
   if (els.closeCartOverlay) els.closeCartOverlay.addEventListener("click", closeCart);
 
   if (els.checkoutBtn) {
-    els.checkoutBtn.addEventListener("click", () => {
-      alert("Demo checkout only.");
-    });
+    els.checkoutBtn.addEventListener("click", handleCheckout);
   }
 
   window.addEventListener("hashchange", setActiveNav);
