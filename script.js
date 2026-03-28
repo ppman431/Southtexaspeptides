@@ -9,6 +9,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
     img: "GLP310.png"
+    soldOut: false
   },
   {
     id: "glp3r-50",
@@ -20,6 +21,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
     img: "GLP320.png"
+    soldOut: false
   },
   {
     id: "Cjc1295",
@@ -31,6 +33,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "CJC1295",
     img: "CJC.png"
+    soldOut: false
   },
   {
     id: "GHKCu",
@@ -42,6 +45,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "GHK-CU",
     img: "GHK.png"
+    soldOut: false
   },
   {
     id: "Klow",
@@ -53,6 +57,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "KLOW",
     img: "KLOW.png"
+    soldOut: true
   },
   {
     id: "GHRP-6",
@@ -64,6 +69,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "GHRP-6",
     img: "GHRP.png"
+    soldOut: false
   },
   {
     id: "Nad+",
@@ -75,6 +81,7 @@ const PRODUCTS = [
     badges: ["Research", "HPLC 99%"],
     ref: "NAD+",
     img: "Nad.png"
+    soldOut: true
   }
 ];
 
@@ -155,7 +162,7 @@ function renderProducts(list) {
     card.className = "card";
     card.innerHTML = `
       <div class="card__media">
-        <div class="tag">${p.tag}</div>
+        <div class="tag">${p.soldOut ? "Sold Out" : p.tag}</div>
         <div class="productimg">
           <img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;">
         </div>
@@ -167,12 +174,16 @@ function renderProducts(list) {
         <h3 class="card__title">${p.name}</h3>
         <p class="card__desc">${p.short}</p>
         <div class="card__meta">${p.purity}</div>
-        <div class="card__foot">
-          <div class="price">${money(p.price)}</div>
-          <button class="addbtn" data-add="${p.id}">
-            <span aria-hidden="true">🛒</span> Add
-          </button>
-        </div>
+      <div class="card__foot">
+  <div class="price">${money(p.price)}</div>
+  ${
+    p.soldOut
+      ? `<button class="addbtn soldoutbtn" disabled>Sold Out</button>`
+      : `<button class="addbtn" data-add="${p.id}">
+           <span aria-hidden="true">🛒</span> Add
+         </button>`
+  }
+</div>
       </div>
     `;
     els.grid.appendChild(card);
