@@ -8,7 +8,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "GLP310.png"
+    img: "GLP310.png",
     soldOut: false
   },
   {
@@ -20,7 +20,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GLP3-R-01",
-    img: "GLP320.png"
+    img: "GLP320.png",
     soldOut: false
   },
   {
@@ -32,7 +32,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "CJC1295",
-    img: "CJC.png"
+    img: "CJC.png",
     soldOut: false
   },
   {
@@ -44,7 +44,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GHK-CU",
-    img: "GHK.png"
+    img: "GHK.png",
     soldOut: false
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "KLOW",
-    img: "KLOW.png"
+    img: "KLOW.png",
     soldOut: true
   },
   {
@@ -68,7 +68,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "GHRP-6",
-    img: "GHRP.png"
+    img: "GHRP.png",
     soldOut: false
   },
   {
@@ -80,7 +80,7 @@ const PRODUCTS = [
     tag: "Featured",
     badges: ["Research", "HPLC 99%"],
     ref: "NAD+",
-    img: "Nad.png"
+    img: "Nad.png",
     soldOut: true
   }
 ];
