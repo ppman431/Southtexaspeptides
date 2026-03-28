@@ -55,17 +55,6 @@ const PRODUCTS = [
     img: "KLOW.png"
   },
   {
-    id: "Lipo-C",
-    name: "Lipo-C 216mg",
-    short: "Enhance metabolism, boost energy levels, and aid in fat reduction - Not for human consumption",
-    purity: "99%+ purity",
-    price: 75.0,
-    tag: "Featured",
-    badges: ["Research", "HPLC 99%"],
-    ref: "LIPO-C",
-    img: "Lipo.png"
-  },
-  {
     id: "GHRP-6",
     name: "GHRP-6 10mg",
     short: "A synthetic hexapeptide that stimulates the pituitary gland to release growth hormone (GH) - Not for human consumption",
